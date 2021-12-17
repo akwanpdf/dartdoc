@@ -235,7 +235,7 @@ class Dartdoc {
   /// analysis error in the code.
   Future<DartdocResults> generateDocs() async {
     try {
-      logInfo('Documenting ${config.topLevelPackageMeta}...');
+      logInfo('Documenting ${config.topLevelPackageMeta} with fork...');
 
       var dartdocResults = await generateDocsBase();
       if (dartdocResults.packageGraph.localPublicLibraries.isEmpty) {
